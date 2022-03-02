@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <style>
+        table tr td{
+            width:50px;
+            height:50px;
+        }
+        .color1{
+            background-color: {{color1}};
+        }
+        .color2{
+            background-color: {{color2}};
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkerboard</h1>
+    <p>You can customize the x and y values of the checkerboard and colors in the url by seperating them with slash</p>
+    <p>ex. x/y/color1/color2 </p>
+    <table>
+        {% for i in range(num1): %}
+        <tr>
+        {% for j in range(num2): %}
+            <td class='color{{(i+j)%2+1}}'></td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+    </table>
+
+</body>
+</html>

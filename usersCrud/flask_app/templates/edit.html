@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Users</title>
+</head>
+<body>
+    <form action='/update/user/{{one_user.id}}' method="POST">
+        <p>First Name:</p>
+        <input type="text" value="{{one_user.first_name}}" name="first_name">
+        <p>Last Name:</p>
+        <input type="text" value="{{one_user.last_name}}" name="last_name">
+        <p>Email:</p>
+        <input type="text" value="{{one_user.email}}" name="email">
+        <br><br>
+        <button type="submit" btn-primary>Edit</button>
+    </form>
+</body>
+</html>
